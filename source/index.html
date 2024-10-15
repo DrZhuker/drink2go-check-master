@@ -11,15 +11,55 @@
 </head>
 
 <body class="page__body">
-  <header class="header">Шапка
-    <div class="header__logo">
-      <picture>
-
-      </picture>
+  <header class="header container ">
+    <div class="header__logo-wrapper">
+      <a class="header__logo" href="index.html">
+        <picture>
+          <source media="(width >= 1440px)" type="image/svg+xml" width="170" height="36"
+            srcset="images/logo-desktop.svg">
+          <source media="(width >= 768px)" type="image/svg+xml" width="82" height="36" srcset="images/logo-tablet.svg">
+          <img src="images/logo-mobile.svg" width="32" height="36" alt="Логотип">
+        </picture>
+      </a>
+      <p>Интернет-магазин кофейных напитков</p>
     </div>
+    <div class="header__user-menu user-menu">
+      <ul class="user-menu__item">
+        <li class="user-menu__items">
+          <a class="user-menu__link user-menu__link--login" href="#">
+            <span>Войти</span>
+          </a>
+        </li>
+        <li class="user-menu__items">
+          <a class="user-menu__link user-menu__link--cart" href="#">
+            <span>Корзина</span>
+          </a>
+        </li>
+        <li class="user-menu__items">
+          <a class="user-menu__link user-menu__link--menu" href="#">
+            <span class="visually-hidden">Меню</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <nav class="header__navigation navigation navigation--close">
+      <ul class="navigation__item">
+        <li class="navigation__items">
+          <a class="navigation__link navigation__link--active" href="#">Главная</a>
+        </li>
+        <li class="navigation__items">
+          <a class="navigation__link" href="#">Каталог</a>
+        </li>
+        <li class="navigation__items">
+          <a class="navigation__link" href="#">Доставка</a>
+        </li>
+        <li class="navigation__items">
+          <a class="navigation__link" href="#">О нас</a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <main>
-    <h1>Страница для старта</h1>
   </main>
 </body>
 

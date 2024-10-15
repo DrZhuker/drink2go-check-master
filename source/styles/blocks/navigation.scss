@@ -1,0 +1,117 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.navigation--close {
+  display: none;
+
+
+  @media (width >=$tablet-width) {
+    display: flex;
+  }
+}
+
+.navigation__item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  left: -320px;
+  top: 30px;
+
+  @media (width >=$tablet-width) {
+    position: relative;
+    left: auto;
+    top: auto;
+  }
+}
+
+.navigation__items {
+  position: relative;
+}
+
+.navigation__items::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: $color-base-secondary;
+  box-shadow: -220px 0 0 $color-base-secondary,
+    225px 0 0 $color-base-secondary;
+  ;
+
+  @media (width >=$tablet-width) {
+    content: none;
+  }
+}
+
+.navigation__items:first-child::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background-color: $color-base-secondary;
+  box-shadow: -220px 0 0 $color-base-secondary,
+    225px 0 0 $color-base-secondary;
+
+  @media (width >=$tablet-width) {
+    content: none;
+  }
+}
+
+.navigation__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-base-black;
+  width: 320px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+
+  @media (width >=$tablet-width) {
+    width: auto;
+    padding: 32px 20px;
+  }
+}
+
+.navigation__link:hover,
+.navigation__link:focus-visible {
+  @media (width >=$tablet-width) {
+    color: $color-base-primary
+  }
+}
+
+.navigation__link:active {
+  background-color: $color-base-secondary;
+}
+
+.navigation__link--active {
+  @media (width >=$tablet-width) {
+    position: relative;
+    color: $color-base-primary;
+  }
+}
+
+.navigation__link--active::after {
+  @media (width >=$tablet-width) {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $color-base-primary;
+  }
+}
