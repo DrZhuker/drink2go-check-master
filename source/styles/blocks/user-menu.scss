@@ -33,7 +33,7 @@
 .user-menu__link::before {
   content: "";
   position: absolute;
-  width: 16px;
+  width: 16px; // попробовать потом убрать строчку
   background-color: $color-base-black;
 }
 
