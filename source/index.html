@@ -11,7 +11,7 @@
 </head>
 
 <body class="page__body">
-  <header class="header container ">
+  <header class="header container" data-test="header">
     <div class="header__logo-wrapper">
       <a class="header__logo" href="index.html">
         <picture>
@@ -60,6 +60,80 @@
     </nav>
   </header>
   <main class="main">
+    <section class="hero" data-test="hero">
+      <div class="hero__wrapper container">
+        <button class="hero__slider-button hero__slider-button--back button"></button>
+
+        <div class="hero__slider">
+          <div class="hero__description-wrapper">
+            <h1 class="hero__title">Декаф Флэт Уайт</h1>
+            <p class="hero__promo-text">Новинка!</p>
+            <p class="hero__description">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским
+              молоком
+              — то,
+              что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
+            <div class="hero__buy-wrapper">
+              <div class="hero__cost-wrapper">
+                <p class="hero__old-price">295₽</p>
+                <p class="hero__new-price">225₽</p>
+              </div>
+              <button class="hero__button-buy button">Заказать</button>
+            </div>
+          </div>
+          <div class="hero__image-wrapper">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/webp" width="600" height="600"
+                srcset="images/hero-flat-white-desktop@1x.webp 1x, images/hero-flat-white-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" type="image/webp" width="476" height="476"
+                srcset="images/hero-flat-white-tablet@1x.webp 1x, images/hero-flat-white-tablet@2x.webp 2x">
+              <source type="image/webp" width="280" height="280"
+                srcset="images/hero-flat-white-mobile@1x.webp 1x, images/hero-flat-white-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" type="image/png" width="600" height="600"
+                srcset="images/hero-flat-white-desktop@1x.png 1x, images/hero-flat-white-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" type="image/png" width="476" height="476"
+                srcset="images/hero-flat-white-tablet@1x.png 1x, images/hero-flat-white-tablet@2x.png 2x">
+              <img class="hero__image" src="hero-flat-white-mobile@1x.png"
+                srcset="images/images/hero-flat-white-mobile@2x.png" width="280" height="280"
+                alt="Банка корма с курицей">
+            </picture>
+          </div>
+        </div>
+        <button class="hero__slider-button hero__slider-button--forward button"></button>
+      </div>
+      <ul class="hero__switch">
+        <li class="hero__switch-items">
+          <button class="button hero__switch-button"></button>
+        </li>
+        <li class="hero__switch-items">
+          <button class="button hero__switch-button hero__switch-button--unactive"></button>
+        </li>
+        <li class="hero__switch-items">
+          <button class="button hero__switch-button hero__switch-button--unactive"></button>
+        </li>
+      </ul>
+    </section>
+    <section class="features container" data-test="features">
+      <h2 class="features__title">Главные причины выбрать Drink2Go</h2>
+      <p class="features__promo-text">Преимущества</p>
+      <ul class="features__item">
+        <li class="features__items features__items--speed">
+          <h3 class="features__items-title">Скорость</h3>
+          <p class="features__items-description">Готовый напиток всегда под рукой — просто открой банку</p>
+        </li>
+        <li class="features__items features__items--fit">
+          <h3 class="features__items-title">Удобство</h3>
+          <p class="features__items-description">Легко помещается и в карман, и в маленькую сумочку</p>
+        </li>
+        <li class="features__items features__items--energy">
+          <h3 class="features__items-title">Бодрость</h3>
+          <p class="features__items-description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+        </li>
+        <li class="features__items features__items--eco">
+          <h3 class="features__items-title">Экологичность</h3>
+          <p class="features__items-description">Вся упаковка сделана из перерабатываемых материалов</p>
+        </li>
+      </ul>
+    </section>
   </main>
   <footer class="footer container">
     <div class="footer__wrapper">
