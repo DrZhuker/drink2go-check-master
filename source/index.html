@@ -135,13 +135,135 @@
       </ul>
     </section>
 
-    <section class="map">
-      <div class="map__wrapper">
+    <section class="catalog" data-test="catalog">
+      <div class="catalog__wrapper container">
+        <h2 class="catalog__title">Каталог кофейных напитков</h2>
+        <p class="catalog__promo-text">Каталог</p>
 
+
+        <div class="catalog__filter">
+
+          <form class="catalog__filter-form" action="https://echo.htmlacademy.ru/" method="post">
+            <!-- slider -->
+
+            <fieldset class="catalog__filter-group">
+              <legend class="catalog__filter-title">Цена</legend>
+              <ul class="catalog__filter-cost-list">
+                <li class="catalog__filter-cost-item">
+                  <div class="catalog__slider-wrapper">
+                    <div class="catalog__slider-content"></div>
+                    <div class="catalog__slider-content catalog__slider-content--active"
+                      style="left: 0px; width: 236px;">
+                      <button class="catalog__slider catalog__slider--min" type="button"
+                        style="left: 0px;"><span></span></button>
+                      <button class="catalog__slider catalog__slider--max" type="button"
+                        style="left: 236px;"><span></span></button>
+                    </div>
+                  </div>
+                </li>
+                <li class="catalog__filter-cost-item ">
+                  <div class="catalog__cost-input-wrapper">
+                    <label class="catalog__control-filter-cost">
+                      <span class="catalog__control-filter-text visually-hidden">от</span>
+                      <input class="catalog__filter-cost-input catalog__filter-cost-input--left" name="low-cost"
+                        type="text" value="0">
+                    </label>
+                    <div></div>
+                    <label class="catalog__control-filter-cost">
+                      <span class="catalog__control-filter-text visually-hidden">до</span>
+                      <input class="catalog__filter-cost-input catalog__filter-cost-input--right" name="hight-cost"
+                        type="text" value="900">
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </fieldset>
+
+            <!-- radio -->
+            <fieldset class="catalog__filter-group">
+              <legend class="catalog__filter-title">Наличие молока</legend>
+              <ul class="catalog__filter-radio-list">
+                <li class="catalog__filter-radio-item">
+                  <label class="catalog__control">
+                    <input class="catalog__control-input visually-hidden" type="radio" name="type-of-housing"
+                      value="hight-hotel" checked>
+                    <span class="catalog__control-input-check catalog__control-input-radio"></span>
+                    <span class="catalog__control-input-text">Неважно</span>
+                  </label>
+                </li>
+                <li class="catalog__filter-radio-item">
+                  <label class="catalog__control">
+                    <input class="catalog__control-input visually-hidden" type="radio" name="type-of-housing"
+                      value="hotel">
+                    <span class="catalog__control-input-check catalog__control-input-radio"></span>
+                    <span class="catalog__control-input-text">Только животное</span>
+                  </label>
+                </li>
+                <li class="catalog__filter-radio-item">
+                  <label class="catalog__control">
+                    <input class="catalog__control-input visually-hidden" type="radio" name="type-of-housing"
+                      value="apartament">
+                    <span class="catalog__control-input-check control-input-radio"></span>
+                    <span class="catalog__control-input-text">Только растительное</span>
+                  </label>
+                </li>
+                <li class="catalog__filter-radio-item catalog__filter-radio-item--disabled">
+                  <label class="catalog__control">
+                    <input class="catalog__control-input visually-hidden" type="radio" name="type-of-housing"
+                      value="apartament">
+                    <span class="catalog__control-input-check control-input-radio"></span>
+                    <span class="catalog__control-input-text">Без молока</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <!-- checkbox -->
+            <fieldset class="catalog__filter-group">
+              <legend class="catalog__filter-title">Страна произрастания</legend>
+              <ul class="catalog__filter-checkbox-list">
+                <li class="catalog__filter-checkbox-item">
+                  <label class="catalog__control">
+                    <input class="catalog__control-input visually-hidden" type="checkbox" name="pool" checked>
+                    <span class="catalog__control-input-check"></span>
+                    <span class="catalog__control-input-text">Бассейн</span>
+                  </label>
+                </li>
+                <li class="catalog__filter-checkbox-item">
+                  <label class="catalog__control">
+                    <input class="catalog__control-input visually-hidden" type="checkbox" name="parking" checked>
+                    <span class="catalog__control-input-check"></span>
+                    <span class="catalog__control-input-text">Парковка</span>
+                  </label>
+                </li>
+                <li class="catalog__filter-checkbox-item">
+                  <label class="catalog__control">
+                    <input class="catalog__control-input visually-hidden" type="checkbox" name="wifi">
+                    <span class="catalog__control-input-check"></span>
+                    <span class="catalog__control-input-text">Wi-Fi</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+
+            <div class="catalog__container-button">
+              <button class="catalog__button--apply button" type="submit">Применить</button>
+              <button class="catalog__button--reset button" type="reset">Сбросить</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="map" data-test="map">
+      <h2 class="map__title visually-hidden">Мы на карте</h2>
+      <div class="map__wrapper">
       </div>
     </section>
   </main>
-  <footer class="footer container">
+
+  <footer class="footer container" data-test="footer">
     <div class="footer__wrapper">
       <div class="footer__header divider">
         <div class="footer__logo-wrapper">
