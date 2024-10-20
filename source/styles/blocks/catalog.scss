@@ -8,6 +8,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
 }
 
 .catalog__title {
@@ -35,6 +36,7 @@
 .catalog__filter {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 .catalog__filter-form {
@@ -73,6 +75,25 @@
   flex-wrap: wrap;
 }
 
+.catalog__filter-group--disabled .catalog__slider-content--active {
+  background-color: $color-base-grey;
+}
+
+.catalog__filter-group--disabled .catalog__slider {
+  border-color: $color-base-grey;
+  cursor: unset;
+  pointer-events: none;
+}
+
+.catalog__filter-group--disabled .catalog__filter-cost-input {
+  border-color: $color-base-grey;
+  cursor: unset;
+  pointer-events: none;
+  color: $color-base-grey;
+  user-select: none;
+}
+
+
 .catalog__slider {
   width: 24px;
   height: 24px;
@@ -85,6 +106,7 @@
   padding: 0;
   position: absolute;
   top: -11px;
+  cursor: pointer;
 }
 
 .catalog__slider-content {
@@ -98,14 +120,6 @@
   width: 240px;
   height: 2px;
   background-color: $color-alt-primary-lighter;
-}
-
-.catalog__slider-content--active:disabled {
-  background-color: $color-base-grey;
-}
-
-.catalog__slider:disabled {
-  border: 2px solid $color-base-grey;
 }
 
 .catalog__slider:not(:disabled):hover span,
@@ -162,6 +176,228 @@
   text-align: center;
 }
 
-.catalog__filter-cost-input--left {
+.catalog__filter-cost-input::placeholder {
   color: $color-base-grey;
+}
+
+.catalog__filter-cost-input:focus,
+.catalog__filter-cost-input:focus-visible {
+  border: 2px solid $color-alt-primary-darker;
+  outline: none;
+}
+
+.catalog__filter-radio-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.catalog__filter-radio-item {
+  padding-left: 34px;
+  position: relative;
+}
+
+.catalog__conrol {
+  display: flex;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.catalog__control-input-radio {
+  width: 24px;
+  height: 24px;
+  background-color: $color-base-white;
+  border-radius: 50%;
+  border: 2px solid $color-base-grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.catalog__control-input:checked+.catalog__control-input-radio {
+  border: 2px solid $color-base-primary;
+}
+
+.catalog__control-input:checked+.catalog__control-input-radio span {
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: 21px;
+  height: 21px;
+  background-color: $color-base-primary;
+  border-radius: 50%;
+  border: 2px solid $color-base-white;
+}
+
+.catalog__control-input:disabled+.catalog__control-input-radio {
+  border: 2px solid $color-alt-light-grey;
+  cursor: unset;
+}
+
+.catalog__control-input-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+.catalog__control-input:disabled+.catalog__control-input-check+.catalog__control-input-text {
+  color: $color-alt-light-grey;
+}
+
+.catalog__filter-checkbox-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.catalog__control-input-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+.catalog__filter-checkbox-item {
+  padding-left: 52px;
+  position: relative;
+}
+
+// <label class="switch">
+//   <input type="checkbox">
+//   <span class="slider"></span>
+// </label>
+
+/* Стили контейнера */
+.catalog__control-input-check--checkbox {
+  display: block;
+  width: 42px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $color-base-grey;
+  transition: .4s;
+  border-radius: 12px;
+}
+
+/* Стили кружка внутри переключателя */
+.catalog__control-input-check--checkbox:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 2px;
+  background-color: $color-base-white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+/* Переключение цвета при включенном состоянии */
+.catalog__control-input:checked+.catalog__control-input-check--checkbox {
+  background-color: $color-base-primary;
+}
+
+/* Перемещение кружка вправо при включенном состоянии */
+.catalog__control-input:checked+.catalog__control-input-check--checkbox:before {
+  transform: translateX(18px);
+}
+
+.catalog__control-input:disabled+.catalog__control-input-check--checkbox {
+  background-color: $color-alt-light-grey;
+  cursor: unset;
+}
+
+.catalog__container-button {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+
+.catalog__button--reset {
+  background-color: $color-base-white;
+  color: $color-base-primary;
+}
+
+.catalog__button--reset:disabled {
+  background-color: $color-alt-light-grey;
+}
+
+.catalog__sort {
+  display: flex;
+}
+
+.catalog__results {
+  display: flex;
+}
+
+.catalog__sort-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
+}
+
+.catalog__sort-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+}
+
+.catalog__sort-select {
+  border: none;
+  background-color: unset;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: right;
+  color: $color-base-primary;
+  height: 24px;
+  border-radius: 4px;
+}
+
+.catalog__sort-select:hover,
+.catalog__sort-select:focus-visible {
+  background-color: $color-alt-primary-opacity;
+}
+
+.catalog__item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 280px;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.catalog__items {
+  margin: 0;
+  padding: 0;
 }

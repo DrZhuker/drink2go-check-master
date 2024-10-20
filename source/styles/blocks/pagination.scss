@@ -1,0 +1,30 @@
+.pagination {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 280px;
+}
+
+.pagination__items {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination__items-link {
+  display: flex;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: $color-base-primary;
+  min-width: 40px;
+  height: 40px;
+  background-color: $color-base-white ;
+}
