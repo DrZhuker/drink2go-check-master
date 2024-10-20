@@ -1,0 +1,255 @@
+.hero {
+  background-color: $color-background-flat-white;
+
+  @media (width >=$desktop-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.hero__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 320px;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media (width >=$tablet-width) {
+    width: 768px;
+    margin-bottom: 187px;
+  }
+
+  @media (width >=$desktop-width) {
+    width: 1440px;
+    margin-bottom: 0;
+  }
+}
+
+.hero__slider-button {
+  background-color: unset;
+  width: 20px;
+  min-height: 656px;
+  padding: 0;
+
+  @media (width >=$tablet-width) {
+    min-height: 640px;
+    width: 80px;
+  }
+
+  @media (width >=$desktop-width) {
+    min-height: 714px;
+  }
+}
+
+.hero__slider-button--back {
+  position: relative;
+}
+
+.hero__slider-button--back::after {
+  content: "";
+  position: absolute;
+  background-color: $color-base-primary;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  mask-image: url("../../icons/icon-button-arrow.svg");
+  mask-size: 20px 20px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.hero__slider-button--forward::after {
+  content: "";
+  position: absolute;
+  background-color: $color-base-primary;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  mask-image: url("../../icons/icon-button-arrow.svg");
+  mask-size: 20px 20px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  transform: translateY(134%) rotate(180deg);
+}
+
+.hero__slider {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  gap: 10px;
+
+  @media (width >=$tablet-width) {
+    width: 608px;
+    gap: unset;
+  }
+
+  @media (width >=$desktop-width) {
+    width: 1280px;
+    align-items: flex-start;
+    gap: 30px;
+    flex-direction: row;
+  }
+}
+
+.hero__description-wrapper {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  gap: 10px;
+
+  @media (width >=$tablet-width) {
+    min-width: 608px;
+    padding-top: 60px;
+    gap: unset;
+  }
+
+  @media (width >=$desktop-width) {
+    padding-top: 180px;
+    align-items: flex-start;
+  }
+
+}
+
+.hero__image-wrapper {
+  display: flex;
+  order: -2;
+
+  @media (width >=$tablet-width) {
+    order: 1;
+    margin-bottom: -187px;
+  }
+
+  @media (width >=$desktop-width) {
+    order: -2;
+    margin-bottom: 0;
+    padding-top: 30px;
+  }
+}
+
+.hero__image {
+  display: flex;
+}
+
+.hero__promo-text {
+  display: flex;
+  order: -1;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-base-primary;
+
+  @media (width >=$tablet-width) {
+    margin-bottom: 4px;
+  }
+}
+
+.hero__title {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-align: center;
+
+  @media (width >=$tablet-width) {
+    margin-bottom: 16px;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+}
+
+.hero__description {
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  margin: 0;
+
+  @media (width >=$tablet-width) {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  @media (width >=$desktop-width) {
+    margin-bottom: 40px;
+    text-align: left;
+  }
+}
+
+.hero__buy-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+
+  @media (width >=$tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.hero__cost-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.hero__old-price {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  text-decoration: line-through;
+  color: $color-base-primary
+}
+
+.hero__new-price {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+}
+
+.hero__switch {
+  margin: 0;
+  list-style: none;
+  display: none;
+
+  @media (width >=$desktop-width) {
+    display: flex;
+    gap: 8px;
+    margin-top: -73px;
+    margin-bottom: 70px;
+  }
+}
+
+.hero__switch-button {
+  border-radius: 0;
+  width: 64px;
+  height: 4px;
+  padding: 0;
+}
+
+.hero__switch-button--unactive {
+  background-color: $color-base-white;
+}

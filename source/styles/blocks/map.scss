@@ -1,0 +1,62 @@
+.hero__slider-button {
+  background-color: unset;
+  width: 20px;
+  min-height: 656px;
+  padding: 0;
+  outline: 1px solid fuchsia;
+
+  @media (width >=$tablet-width) {
+    min-height: 640px;
+    width: 80px;
+  }
+
+  @media (width >=$desktop-width) {
+    min-height: 714px;
+  }
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+
+}
+
+.map__wrapper {
+  display: flex;
+  min-width: 320px;
+  height: 420px;
+  background-image:
+    image-set(url("../../images/map-mobile@2x.webp") 2x,
+      url("../../images/map-mobile@1x.webp") 1x,
+      url("../../images/map-mobile@2x.png") 2x,
+      url("../../images/map-mobile@1x.png") 1x);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @media (width >=$mobile-width) {
+    flex-grow: 1;
+    background-image:
+      image-set(url("../../images/map-tablet@2x.webp") 2x,
+        url("../../images/map-tablet@1x.webp") 1x,
+        url("../../images/map-tablet@2x.png") 2x,
+        url("../../images/map-tablet@1x.png") 1x);
+  }
+
+  @media (width=$tablet-width) {
+    height: 480px;
+  }
+
+  @media (width > $tablet-width) {
+    height: 480px;
+    background-image:
+      image-set(url("../../images/map-desktop@2x.webp") 2x,
+        url("../../images/map-desktop@1x.webp") 1x,
+        url("../../images/map-desktop@2x.png") 2x,
+        url("../../images/map-desktop@1x.png") 1x);
+  }
+
+  @media (width >=$desktop-width) {
+    height: 540px;
+  }
+}
